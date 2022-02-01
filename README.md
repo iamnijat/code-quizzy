@@ -1,16 +1,21 @@
-# quiz_programming
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/iamnijat/code-quizzy/Flutter%20CI/master)
+![GitHub forks](https://img.shields.io/github/forks/iamnijat/code-quizzy)
+![GitHub stars](https://img.shields.io/github/stars/iamnijat/code-quizzy)
+![GitHub watchers](https://img.shields.io/github/watchers/iamnijat/code-quizzy)
+![GitHub contributors](https://img.shields.io/github/contributors/iamnijat/code-quizzy)
+![GitHub last commit](https://img.shields.io/github/last-commit/iamnijat/code-quizzy)
+![GitHub top language](https://img.shields.io/github/languages/top/iamnijat/code-quizzy)
 
-A new Flutter project.
+# Flutter Code Quizzy Application
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![mockup](https://user-images.githubusercontent.com/42466886/151920669-91c23fbb-d38a-4401-a865-c65ffece840a.png)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+-------
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Configuration for this application
+
+Fortunately, there is no configuration for this project apart from the flutter development setup on your computer.
+
+You've done entire steps correctly and I make sure that this project will have paramount effect on your progress learning `Flutter`
