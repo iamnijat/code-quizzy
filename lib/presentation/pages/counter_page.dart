@@ -48,9 +48,9 @@ class _CounterPageState extends State<CounterPage> {
                   const PlasmaBackground(),
                   Positioned(
                     top: 15.0.h,
-                    child: Stack(
+                    child: const Stack(
                       alignment: Alignment.center,
-                      children: const [
+                      children: [
                         AnimatedCircles(),
                         CounterValue(),
                       ],

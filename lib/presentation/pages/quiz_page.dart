@@ -10,10 +10,10 @@ class QuizPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Consumer<QuizRepository>(
         builder: (context, quiz, widget) => quiz.questionsListLength == 0
-            ? Column(
+            ? const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: const <Widget>[
+                children: <Widget>[
                   SplashAnimation(),
                 ],
               )

@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
         navigatorKey: NavigationService.navigationKey,
         debugShowCheckedModeBanner: false,
         title: 'Programming Quiz',
-        useInheritedMediaQuery: true,
         initialRoute: NavigationRoutes.splash,
         onGenerateRoute: generateRoute,
       );

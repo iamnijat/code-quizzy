@@ -5,10 +5,10 @@ class IntroPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: AppPalette.whiteColor,
       body: Column(
-        children: const <Widget>[
+        children: <Widget>[
           IntroImage(),
           IntroTitle(),
           IntroButton(),
