@@ -48,16 +48,16 @@ class _CounterPageState extends State<CounterPage> {
                   const PlasmaBackground(),
                   Positioned(
                     top: 15.0.h,
-                    child: const Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        AnimatedCircles(),
-                        CounterValue(),
-                      ],
+                    child: AnimatedCircles(
+                      counterValue: int.tryParse(counterValue ?? '3') ?? 3,
+                      onIncrement: () =>
+                          context.read<CounterCubit>().increment(),
+                      onDecrement: () =>
+                          context.read<CounterCubit>().decrement(),
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ));
