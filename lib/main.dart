@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_programming/domain/repositories/score_store_repository.dart';
+import 'domain/repositories/category_repository.dart';
 import 'domain/repositories/quiz_repository.dart';
 import 'logic/cubit/counter_cubit.dart';
 import 'app.dart';
@@ -38,6 +39,8 @@ void main() async {
             Provider(create: (_) => getIt.get<ServerRepository>()),
             Provider(create: (_) => getIt.get<SharedPreferencesStore>()),
             ChangeNotifierProvider(create: (_) => getIt.get<QuizRepository>()),
+            ChangeNotifierProvider(
+                create: (_) => getIt.get<CategoryRepository>()),
             Provider(create: (_) => getIt.get<ScoreStoreRepository>()),
           ],
           child: const MyApp(),

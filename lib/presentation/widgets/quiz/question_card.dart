@@ -14,7 +14,6 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     var index = questionIndex;
     var data = question!;
-    var answers = data.answers!;
     return SingleChildScrollView(
       child: Consumer<QuizRepository>(
         builder: (context, quiz, widget) => Column(
@@ -22,42 +21,17 @@ class QuestionCard extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 6.w, vertical: 3.h),
               child: Text(
-                data.question!,
+                data.text ?? '',
                 textAlign: TextAlign.center,
                 style: AppStyles.quizQuestionTextStyle,
               ),
             ),
-            if (answers.answerA != null)
-              Option(
-                onCheckAnswerTap: () => quiz.checkAns(answers.answerA!, index!),
-                text: answers.answerA.toString(),
-              ),
-            if (answers.answerB != null)
-              Option(
-                onCheckAnswerTap: () => quiz.checkAns(answers.answerB!, index!),
-                text: answers.answerB.toString(),
-              ),
-            if (answers.answerC != null)
-              Option(
-                onCheckAnswerTap: () => quiz.checkAns(answers.answerC!, index!),
-                text: answers.answerC.toString(),
-              ),
-            if (answers.answerD != null)
-              Option(
-                onCheckAnswerTap: () =>
-                    quiz.checkAns(data.answers!.answerD!, index!),
-                text: data.answers?.answerD.toString(),
-              ),
-            if (data.answers!.answerE != null)
-              Option(
-                onCheckAnswerTap: () => quiz.checkAns(answers.answerE!, index!),
-                text: answers.answerE.toString(),
-              ),
-            if (answers.answerF != null)
-              Option(
-                onCheckAnswerTap: () => quiz.checkAns(answers.answerF!, index!),
-                text: answers.answerF.toString(),
-              ),
+            for (final answer in data.answers)
+              if (answer.text != null)
+                Option(
+                  onCheckAnswerTap: () => quiz.checkAns(answer.text!, index!),
+                  text: answer.text,
+                ),
             Padding(
                 padding: AppStyles.mainPaddingStyle,
                 child: EmphasizedButton(

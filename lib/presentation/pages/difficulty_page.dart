@@ -33,7 +33,7 @@ class _DifficultyPageState extends State<DifficultyPage> {
               physics: const BouncingScrollPhysics(),
               controller: pageController,
               onPageChanged: onPageChanged,
-              itemCount: 4,
+              itemCount: Difficulty.getDifficultyList().length,
               itemBuilder: (ctx, i) => DifficultySlider(
                 i,
               ),

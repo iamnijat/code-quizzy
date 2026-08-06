@@ -10,6 +10,8 @@ void setupLocator(GetIt getIt) {
   //ChangeNotifierProviders
   getIt.registerLazySingleton(
       () => QuizRepository(GetIt.I.get<ServerRepository>()));
+  getIt.registerLazySingleton(
+      () => CategoryRepository(GetIt.I.get<ServerRepository>()));
   //Cubits
   getIt.registerLazySingleton(() => CounterCubit());
 }

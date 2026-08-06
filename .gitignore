@@ -16,9 +16,9 @@
 .idea/
 
 # The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VS Code which you may wish to be included in version control. It is ignored
+# here because launch.json/tasks.json carry the QUIZ_API_KEY dart-define.
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -33,7 +33,6 @@
 /build/
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols

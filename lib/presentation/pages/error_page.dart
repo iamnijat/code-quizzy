@@ -12,6 +12,7 @@ class _ErrorPageState extends State<ErrorPage> {
       Provider.of<NavigationService>(context, listen: false).back(context);
   @override
   Widget build(BuildContext context) {
+    final error = Provider.of<QuizRepository>(context).error;
     return Scaffold(
       backgroundColor: AppPalette.whiteColor,
       body: Column(
@@ -27,7 +28,7 @@ class _ErrorPageState extends State<ErrorPage> {
             padding: EdgeInsets.only(left: 6.w, right: 6.w, top: 2.h),
             child: Center(
               child: Text(
-                "Server Problem",
+                error?.title ?? "Server Problem",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: AppPalette.headlineFourthColor,

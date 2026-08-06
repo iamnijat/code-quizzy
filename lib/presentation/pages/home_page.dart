@@ -64,13 +64,15 @@ class _HomePageState extends State<HomePage> {
     navigation.openSelectNumberOfQuestionsPage(context, withReplacement: false);
   }
 
+  //Push the quiz page first so a failed load can replace it with the error
+  //page instead of being covered by it.
   void _categoryQuiz() {
-    quizRepo.getCategoryQuizData(context);
     navigation.openQuizPage(context, withReplacement: false);
+    quizRepo.getCategoryQuizData(context);
   }
 
   void _randomQuiz() {
-    quizRepo.getRandomQuizData(context);
     navigation.openQuizPage(context, withReplacement: false);
+    quizRepo.getRandomQuizData(context);
   }
 }

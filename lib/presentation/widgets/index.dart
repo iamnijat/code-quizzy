@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_programming/config/constants/assets.dart';
+import 'package:quiz_programming/config/constants/category_icons.dart';
 import 'package:quiz_programming/config/constants/palette.dart';
 import 'package:quiz_programming/config/constants/styles.dart';
 import 'package:quiz_programming/config/utils/correct_answer_definer.dart';

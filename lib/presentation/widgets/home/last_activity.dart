@@ -19,7 +19,11 @@ class LastActivity extends StatelessWidget {
                   width: 11.w,
                   alignment: Alignment.center,
                   color: AppPalette.transparentColor,
-                  child: Image.asset(quiz.topicImage.toString()),
+                  child: Icon(
+                    CategoryIcons.resolve(quiz.topicIcon),
+                    size: 5.h,
+                    color: AppPalette.homeButtonColor,
+                  ),
                 ),
                 SizedBox(
                   width: 4.w,

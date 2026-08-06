@@ -1,6 +1,7 @@
 library get_it;
 
 import 'package:get_it/get_it.dart';
+import 'package:quiz_programming/domain/repositories/category_repository.dart';
 import 'package:quiz_programming/domain/repositories/quiz_repository.dart';
 import 'package:quiz_programming/domain/repositories/score_store_repository.dart';
 import 'package:quiz_programming/domain/repositories/server_repository.dart';

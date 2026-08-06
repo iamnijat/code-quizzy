@@ -52,10 +52,12 @@ class _DifficultySliderState extends State<DifficultySlider> {
 
   void setDifficulty() {
     quizRepo.setDifficulty(
-      difficultyStr: _introSliderList[widget.index].slideTitle,
+      difficultyStr: _introSliderList[widget.index].value,
     );
-    quizRepo.getQuizData(context);
+    //Push the quiz page first so a failed load can replace it with the error
+    //page instead of being covered by it.
     Provider.of<NavigationService>(context, listen: false)
         .openQuizPage(context, withReplacement: false);
+    quizRepo.getQuizData(context);
   }
 }
